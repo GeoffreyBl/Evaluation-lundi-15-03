@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(36, 36, 36);
+}
+/* Bandeau central aligné avec la page */
+#bandeau{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 1000px;
+    height: 150px;
+}
+/* Bandeau blanc */
+header{
+    color: black;
+    background-color: #F4F4F4;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#logosport{
+    height: 60px;
+    width: 270px;
+}
+#logoslogan>h3{
+    text-align: center;
+}
+#slogan>span{
+    color: rgb(255, 174, 0);
+}
+/* Partie droite du bandeau */
+#nav{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 100%;
+}
+#comptepanier{
+    margin-top: 20px;
+    border: 1px black solid;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: space-around;
+}
+#moncompte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+#moncompte>img{
+    height: 30px;
+    margin: 10px;
+}
+#panier{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+#panier>img{
+    height: 30px;
+    margin: 10px;
+}
+#nav>h3{
+    margin: 10px;
+    margin-right: 30px;
+    text-align: end;
+    font-size: 20px;
+}
+#ongletsnav{
+    display: flex;
+    width: 500px;
+    height: 30px;
+}
+#ongletsnav>a{
+    margin-right: -1px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid rgb(175, 173, 173);
+    border-left: 1px solid rgb(175, 173, 173);
+}
+/* Mise en place du background blanc de la page */
+#page{
+    background-color: white;
+    width: 1000px;
+}
+/* Container pour les articles à afficher */
+#container{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Image des deux boxeurs */
+#poster{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-shadow: black 0px 2px 5px;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    transition: 250ms;
+}
+/* Gestion affichage tu titre de l'article et mise en maj forcée */
+.photoarticle>p{
+    margin-top: -40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.photoarticle>img{
+    width: 100%;
+}
+.photoarticle{
+    box-shadow: black 0px 1px 10px;
+    width: 370px;
+    height: 380px;
+}
+/* Div sous l'image de l'article comprenant le bouton voir la vente et les prix */
+.sousarticle{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.voirlavente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color:#2A2C2B;
+    color: white;
+    width: 150px;
+    height: 30px;
+}
+/* Prix de base rayé */
+.msrp{
+    font-size: 135%;
+    text-decoration-line: line-through;
+    font-family: 'Noto Sans', sans-serif;
+    padding-bottom: 10px;
+}
+/* Prix réel doré */
+.prix{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 45px;
+    color: rgb(255, 174, 0);
+    margin-right: 10px;
+}
+/* Pourcent de remise, présent en haut a droite de l'article */
+.remise{
+    font-family: 'Noto Sans', sans-serif;
+    color: rgb(255, 174, 0);
+    background-color: #30322F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 140%;
+    bottom: 420px;
+    left: 320px;
+    height: 50px;
+    width: 70px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(182, 182, 182, 0.75) inset;
+}
+/* Pied de page, mise en place du background */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#3a3a3a;
+    width: 100%;
+}
+#barregrise{
+    position: relative;
+    bottom: 57px;
+    background-color:#3a3a3a;
+    width: 100%;
+    height: 35px;
+}
+.point{
+    background-color: lightgray;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+/* Menu rectangulaire blanc */
+#menubas{
+    box-shadow:#464747 0px 0px 10px;
+    position: relative;
+    top:-58px;
+    border-radius: 10px;
+    display: flex;
+    font-size: 80%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(230, 230, 230);
+    color: black;
+    width: 600px;
+    height: 50px;
+}
+#iconesfoot{
+    margin-top: -26px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.classicone>img{
+    margin-bottom: 15px;
+}
+.classicone{
+    margin: 10px;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 200px;
+}
+/* Bandeau réseaux sociaux */
+#reseaux{
+    margin-top: 20px;
+    display: flex;    
+    justify-content: space-around;
+    width: 500px;
+    border-top: 1px grey solid;
+}
+.logoreseaux{
+    margin: 30px;
+}
+footer>p{
+    margin-bottom: 20px;
+    color: white;
+    font-size: 70%;
+}
+.article:hover{
+    transform: scale(1.08);
+}
+.barredegradeegold{
+    margin-right: -100px;
+    width: 5px;
+    height: 160px;    
+    box-shadow: 0px -75px 15px -8px rgb(255, 174, 0) inset;
+    background-color: #F4F4F4;
+}
+.barredegradeenoir{
+    margin-right: -100px;
+    width: 100px;
+    height: 1px; 
+    position: relative;
+    bottom: 55px;
+    width: 50%;
+    margin-left: 180px;
+    box-shadow: -140px 0px 20px -18px rgb(0, 0, 0) inset;
+    background-color: #ffffff;
+}
+/* Menu mobile qui s'affiche seulement sur iphone */
+#menumobile{
+    display: none;
+}
+/* Gestion lorsque l'écran fait moins de 1000px de large (ajustement de taille/suppression d'éléments)*/
+@media only screen and (max-width:1000px)
+{
+    #moncompte>p{
+        display: none;
+    }
+    #panier>p{
+        display: none;
+    }
+    #nav{
+        width: 45%;
+    }
+    #nav>h3{
+        font-size: 70%;
+    }
+
+    #ongletsnav{
+        font-size: 65%;
+        width: 100%;
+    }
+    #page{
+        width: 90%;
+    }
+}
+/* Gestion lorsque l'écran fait moins de 700px de large (ajustement de taille/suppression d'éléments)*/
+@media only screen and (max-width:700px)
+{
+    .barredegradeegold{
+        display: none;
+    }
+    header{
+        width: 100%;
+        height: 100px;
+    }
+    #nav{
+        display: none;
+    }
+    #menumobile{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: 70px;
+    }
+    #bandeau{
+        margin: 10px;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 100px;
+        width: 100%;
+    }
+    #logosport{
+        height: 30px;
+        width: 130px;
+    }
+    #logoslogan>h3{
+        font-size: 60%;
+    }
+    #page{
+        width: 100%;
+    }
+    #container{
+        padding-bottom: 0px;
+    }
+    #reseaux{
+        border:0;
+        width: 100%;
+    }
+    #menubas{
+        height: 300px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        top:0px;
+        font-size: 120%;
+        flex-wrap: wrap;
+        border-radius: 0;
+    }
+    #menubas>a{
+        height: 50px; 
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;      
+    }
+    .point{
+        display: none;
+    }
+    .remise{
+        bottom: 430px;
+        left: 285px;
+    }
+    #iconesfoot{
+        display: none;
+    }
+    #barregrise{
+        display: none;
+    }
+    footer{
+        height: 150px;
+    }
+}
