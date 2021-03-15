@@ -38,6 +38,10 @@ header{
 #logosport{
     height: 60px;
     width: 270px;
+    animation-duration: 2s;
+    animation-name: bounce;  
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 #logoslogan>h3{
     text-align: center;
@@ -121,9 +125,9 @@ header{
 .article{
     display: flex;
     flex-direction: column;
-    transition: 250ms;
+    transition: 250ms;   
 }
-/* Gestion affichage tu titre de l'article et mise en maj forcée */
+/* Gestion affichage du titre de l'article et mise en maj forcée */
 .photoarticle>p{
     margin-top: -40px;
     text-align: center;
@@ -161,6 +165,7 @@ header{
     text-decoration-line: line-through;
     font-family: 'Noto Sans', sans-serif;
     padding-bottom: 10px;
+    transition: 250ms;   
 }
 /* Prix réel doré */
 .prix{
@@ -168,6 +173,7 @@ header{
     font-size: 45px;
     color: rgb(255, 174, 0);
     margin-right: 10px;
+    transition: 250ms;   
 }
 /* Pourcent de remise, présent en haut a droite de l'article */
 .remise{
@@ -260,6 +266,13 @@ footer>p{
 .article:hover{
     transform: scale(1.08);
 }
+.article:hover>.sousarticle>.msrp{
+    display: none;
+}
+.article:hover>.sousarticle>.prix{
+    margin-right: 50px;
+    font-size: 60px;
+}
 .barredegradeegold{
     margin-right: -100px;
     width: 5px;
@@ -306,8 +319,8 @@ footer>p{
         width: 90%;
     }
 }
-/* Gestion lorsque l'écran fait moins de 700px de large (ajustement de taille/suppression d'éléments)*/
-@media only screen and (max-width:700px)
+/* Gestion lorsque le site est visité sur tablette (ajustement de taille/suppression d'éléments)*/
+@media only screen and (max-width:768px)
 {
     .barredegradeegold{
         display: none;
@@ -316,7 +329,7 @@ footer>p{
         width: 100%;
         height: 100px;
     }
-    #nav{
+    #ongletsnav{
         display: none;
     }
     #menumobile{
@@ -326,20 +339,21 @@ footer>p{
         font-size: 70px;
     }
     #bandeau{
+        padding-top: 10px;
         margin: 10px;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        margin: 0;
         padding: 0;
         height: 100px;
         width: 100%;
     }
     #logosport{
-        height: 30px;
-        width: 130px;
+        margin-top: 20px;
+        height: 50px;
+        width: 200px;
     }
     #logoslogan>h3{
-        font-size: 60%;
+        font-size: 90%;
     }
     #page{
         width: 100%;
@@ -383,5 +397,23 @@ footer>p{
     }
     footer{
         height: 150px;
+    }
+}
+/* Gestion de l'affichage du site sur mobile, suppression de la zone #nav et le hover sur article */
+@media only screen and (max-width:375px){
+    #nav{
+        display: none;
+    }
+    .article:hover{
+        transform: none;
+    }
+}
+/* Animation du logo du bandeau */
+@keyframes bounce{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
     }
 }
