@@ -119,8 +119,8 @@ header{
 #poster{
     display: flex;
     justify-content: center;
-    width: 100%;
     box-shadow: black 0px 2px 5px;
+    width: 100%;
 }
 .article{
     display: flex;
@@ -301,6 +301,9 @@ footer>p{
     #moncompte>p{
         display: none;
     }
+    #nav>h3{
+        text-align: center;
+    }
     #panier>p{
         display: none;
     }
@@ -308,9 +311,8 @@ footer>p{
         width: 45%;
     }
     #nav>h3{
-        font-size: 70%;
+        font-size: 20px;
     }
-
     #ongletsnav{
         font-size: 65%;
         width: 100%;
@@ -336,7 +338,7 @@ footer>p{
         display: flex;
         align-items: center;
         height: 100%;
-        font-size: 70px;
+        font-size: 55px;
     }
     #bandeau{
         padding-top: 10px;
@@ -369,7 +371,7 @@ footer>p{
         height: 300px;
         width: 100%;
         margin: 0px;
-        padding: 0px;
+        padding: 20px;
         top:0px;
         font-size: 120%;
         flex-wrap: wrap;
@@ -377,7 +379,6 @@ footer>p{
     }
     #menubas>a{
         height: 50px; 
-        width: 100%; 
         display: flex;
         justify-content: center;
         align-items: center;      
